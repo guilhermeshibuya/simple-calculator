@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap%27');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Righteous;
+    font-weight: normal;
+}
+
+body{
+    background: linear-gradient(to right, #9b5bd3, #f49076);
+    min-height: 100vh;
+}
+
+.calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(6.5rem, auto) repeat(5, 6rem);
+    justify-content: center;
+    align-content: center;
+    margin: 10vh auto;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: .5rem;
+}
+
+.previous-operand{
+    color: #f49076;
+    font-size: 1.5rem;
+}
+
+.current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.btn{
+    font-size: 2rem;
+    font-weight: 100;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    background-color: #eee;
+}
+
+.btn:hover{
+    background-color: #fff;
+}
+
+.btn:nth-child(4n + 4){
+    background-color: #9156e2;
+}
+
+.btn:nth-child(4n + 4):hover{
+    background-color: #9f70e0;
+}
+
+.btn:nth-last-child(2){
+    background-color: #e62f89;
+}
+
+
+.btn:nth-last-child(2):hover{
+    background-color: #e44c98;
+}
+
+@media screen and (max-width: 680px){
+    .calculator-grid{
+        grid-template-columns: repeat(4, 3.5rem);
+        grid-template-rows: minmax(4.5rem, auto) repeat(5, 3.5rem);
+        margin: 2rem auto;
+        min-height: 80vh;
+    }
+
+    .output{
+        padding: .5rem;
+    }
+    
+    .previous-operand{
+        font-size: .8rem;
+    }
+    
+    .current-operand{
+        font-size: 1.6em;
+    }
+    
+    .btn{
+        font-size: .8rem;
+    }
+}
+
