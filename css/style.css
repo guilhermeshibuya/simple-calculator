@@ -71,11 +71,11 @@ body{
     background-color: #9f70e0;
 }
 
-.btn:nth-last-child(2){
+.btn:nth-last-child(1){
     background-color: #e62f89;
 }
 
-.btn:nth-last-child(2):hover{
+.btn:nth-last-child(1):hover{
     background-color: #e44c98;
 }
 
